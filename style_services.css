@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;  /* ✅ elimina puntos en todas las listas */
+    text-decoration: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f9fafb;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Menú abierto en móvil */
+.nabvar {
+    transition: max-height 0.3s ease;
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(rgba(6,78,59,0.7), rgba(6,78,59,0.7)), 
+                url("Simar/IMG-20250405-WA0009.jpg") center/cover no-repeat;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    padding: 20px;
+}
+
+.Logo {
+    height: 90px;
+}
+
+.menu {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.nabvar ul {
+    display: flex;
+    gap: 20px;
+}
+
+.nabvar ul li a {
+    color: #fff;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 8px;        /* 👈 hace que pueda tener “cuadro” */
+    transition: background 0.3s, color 0.3s;
+}
+
+.nabvar ul li a:hover {
+    background: rgba(15, 157, 88, 0.2); /* 👈 cuadrito verde translúcido */
+    color: #4ade80; /* verde claro */
+}
+
+.header-content h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.header-content p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #e5e7eb;
+}
+
+/* SECCIONES DE SERVICIOS */
+.general {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px auto;
+    max-width: 1200px;
+    border-radius: 20px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.general-1 {
+    flex: 1 1 400px;
+    padding: 40px;
+}
+
+.general-1 h2 {
+    font-size: 2rem;
+    color: #065f46;
+    margin-bottom: 15px;
+}
+
+.general-1 p {
+    color: #4b5563;
+    font-size: 1rem;
+}
+
+.general-2, .general-3, .general-4 {
+    flex: 1 1 400px;
+    min-height: 320px;
+    background-size: cover;
+    background-position: center;
+}
+
+.general-2 { background-image: url("Simar/IMG-20250405-WA0004.jpg"); }
+.general-3 { background-image: url("Simar/DeWatermark.ai_1736469045827.png"); }
+.general-4 { background-image: url("Simar/pixelcut-export-fondo.jpeg"); }
+
+/* FOOTER */
+/* FOOTER */
+footer{ background:linear-gradient(180deg, #064e3b, #043b2a); color:#fff; padding:40px 0 20px 0; margin-top:40px; border-top-left-radius:22px; border-top-right-radius:22px; }
+.footer-container{ display:flex; gap:20px; justify-content:space-between; flex-wrap:wrap; align-items:flex-start; }
+.footer-section{ min-width:200px; max-width:380px; }
+.footer-section h3{ margin-bottom:10px; color:#c9ffe0; display:inline-block; border-bottom:2px solid rgba(255,255,255,0.06); padding-bottom:6px; }
+.footer-section a{ color:#c9ffe0; text-decoration:none; }
+.footer-section ul {
+    list-style: none;   /* 🔴 Sin puntos */
+    margin: 0;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 6px 0;
+}
+.copywrap{ text-align:center; padding:14px 0 28px; color:rgba(255,255,255,0.85); }
+
+/* UTILS */
+.muted{ color:var(--muted); }
+
+
+/* RESPONSIVE */
+@media (max-width:1000px) {
+    .header-content h1 {
+        font-size: 2rem;
+    }
+    .general {
+        flex-direction: column;
+        margin: 20px;
+    }
+    .general-1 {
+        text-align: center;
+        padding: 30px;
+    }
+      .nav-list a, 
+.nabvar ul li a {
+    color: #fff;               /* ✅ enlaces blancos */
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover, 
+.nabvar ul li a:hover {
+    color: #4ade80;            /* ✅ verde claro al pasar el mouse */
+}
+   
+     .nav-toggle {
+        display: inline-block;
+    }
+    .nabvar {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: #064e3b;
+        max-height: 0;
+        overflow: hidden;
+        text-align: center;
+    }
+    .nabvar.open {
+        max-height: 300px; /* se expande al abrir */
+    }
+    .nabvar ul {
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 15px;
+    }
+    .footer-container {
+    flex-direction: column;   /* 🔴 Poner secciones en columna */
+    align-items: center;      /* 🔴 Centrar horizontalmente */
+    text-align: center;       /* 🔴 Centrar texto */
+    gap: 25px;                /* 🔴 Espacio entre bloques */
+}
+
+.footer-section {
+    min-width: unset;         /* 🔴 Evita anchos fijos */
+    width: 100%;              /* 🔴 Que ocupe el ancho disponible */
+}
+
+}

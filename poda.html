@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Poda | Agrícola Simar</title>
+  <link rel="icon" href="SIMAR_LOGO-removebg-preview.png">
+  <link rel="stylesheet" href="poda.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <video class="hero-video" autoplay muted loop playsinline poster="injertacion-poster.jpg">
+      <source src="injertacion-hero.mp4" type="video/mp4">
+      Tu navegador no soporta video.
+    </video>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-mask">
+      <svg viewBox="0 0 1200 300" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <mask id="mask-text">
+            <rect width="100%" height="100%" fill="#fff"></rect>
+            <text x="50%" y="45%" text-anchor="middle"
+                  font-family="Poppins, sans-serif" font-weight="700" font-size="100" fill="black">
+             PODA
+            </text>
+            <text x="50%" y="70%" text-anchor="middle"
+                  font-family="Poppins, sans-serif" font-weight="500" font-size="30" fill="black">
+              Técnica avanzada · Cacao de calidad
+            </text>
+          </mask>
+        </defs>
+        <rect width="100%" height="100%" fill="rgba(0,0,0,0.6)" mask="url(#mask-text)"></rect>
+      </svg>
+    </div>
+
+    <div class="top-bar container">
+      <a href="trabajos.html" class="back-btn" aria-label="Volver al inicio">
+        <i class="bi bi-arrow-left-short"></i>
+      </a>
+      <a href="trabajos.html" class="brand">
+        <img src="SIMAR_LOGO-removebg-preview.png" alt="Agrícola Simar" class="brand-logo">
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Introducción -->
+    <section class="section intro fade-up">
+      <div class="container">
+        <h2>¿Qué es la injertación?</h2>
+        <p>
+          La injertación del cacao es una técnica que combina lo mejor de dos plantas: una que aporta raíz sana
+          y otra que aporta genética de alto rendimiento. En nuestro vivero realizamos esta técnica con precisión
+          y compromiso, para garantizar resultados superiores.
+        </p>
+      </div>
+    </section>
+
+    <!-- Proceso -->
+    <section class="section process light-bg fade-up">
+      <div class="container">
+        <h2>Nuestro proceso paso a paso</h2>
+        <div class="process-grid">
+          <div class="process-step">
+            <div class="step-num">1</div>
+            <h4>Selección de patrón</h4>
+            <p>Elegimos plantas robustas y raíces sanas para iniciar el injerto.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-num">2</div>
+            <h4>Injerto</h4>
+            <p>Realizamos la unión de tejidos con técnica especializada para asegurar el éxito.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-num">4</div>
+            <h4>Entrega</h4>
+            <p>Plántulas listas para campo, acompañadas de asesoría técnica.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beneficios -->
+ 
+
+    <!-- Galería slider automática -->
+    <section class="section gallery fade-up">
+      <div class="container">
+        <h2>Imágenes del proceso</h2>
+        <div class="gallery-slider">
+          <div class="slide"><img src="injert1.jpg" alt="Injertación paso 1"></div>
+          <div class="slide"><img src="injert2.jpg" alt="Injertación paso 2"></div>
+          <div class="slide"><img src="injert3.jpg" alt="Injertación paso 3"></div>
+          <div class="slide"><img src="injert4.jpg" alt="Injertación paso 4"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-block">
+        <h4>Sobre Agrícola Simar</h4>
+        <p>Producción de material vegetal, innovación agronómica y compromiso con el campo.</p>
+      </div>
+      <div class="footer-block">
+        <h4>Subpáginas</h4>
+        <ul class="footer-links">
+          <li><a href="vivero.html">Vivero</a></li>
+          <li><a href="poda.html">Poda</a></li>
+        </ul>
+      </div>
+      <div class="footer-block">
+        <h4>Contacto</h4>
+        <ul class="contact-list">
+          <li><a href="mailto:agricolasimarsas@gmail.com"><i class="bi bi-envelope"></i> Gmail</a></li>
+          <li><a href="https://w.app/eh1xCP"><i class="bi bi-whatsapp"></i> WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Agrícola Simar S.A.S. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Animaciones scroll (Intersection Observer)
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('in-view');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-up').forEach(el=> io.observe(el));
+
+    // Slider automático – simple
+    const slider = document.querySelector('.gallery-slider');
+    let idx = 0;
+    setInterval(()=>{
+      idx = (idx + 1) % slider.children.length;
+      slider.style.transform = `translateX(-${idx * 100}%)`;
+    }, 4000);
+  </script>
+
+</body>
+</html>

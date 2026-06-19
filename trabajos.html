@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajos | Agrícola Simar</title>
+     <link rel="icon" href="Simar/SIMAR_LOGO-removebg-preview.png">
+    <link rel="stylesheet" href="style_trabajos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="menu container">
+            <a href="index.html" class="logo">
+                <img src="Simar/SIMAR_Agricola_blanco.png" class="Logo" alt="Logo Agrícola Simar">
+            </a>
+
+            <!-- Botón hamburguesa -->
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <nav class="nabvar" id="mainNav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-content container">
+            <h1 class="title">Trabajos</h1>
+            <p class="principio">
+                En Agrícola Simar garantizamos la calidad y procedencia. Nos especializamos en clones de cacao, injertación y patronaje, 
+                así como material vegetal de especies maderables y frutales. 
+                Trabajamos para fortalecer la cadena productiva del sector agrícola, con soluciones integrales adaptadas a tus necesidades.
+            </p>
+        </div>
+    </header>
+
+    <!-- SECCIÓN TRABAJOS -->
+    <section class="trabajo container">
+        <h2>Trabajos que estamos realizando</h2>
+        <p class="txt-p">
+            En Agrícola Simar, contamos con una amplia experiencia en el sector agrícola, 
+            ofreciendo servicios especializados como injertación, manejo de viveros, poda 
+            y asesoramiento técnico. Nuestro compromiso con la calidad y las mejores prácticas 
+            nos ha consolidado como una empresa confiable y experta en el campo.
+        </p>
+
+        <div id="punto-especifico" class="trabajo-group">
+            <article class="trabajo-card">
+                <img src="Simar/poda.png" alt="Poda">
+                <h3>Poda</h3>
+                <a href="Poda.html" class="boton-paginas">Información</a>
+            </article>
+
+            <article class="trabajo-card">
+                <img src="Simar/injertacion.png" alt="Injertación">
+                <h3>Injertación</h3>
+                <a href="Injertacion.html" class="boton-paginas">Información</a>
+            </article>
+
+            <article class="trabajo-card">
+                <img src="Simar/vivero_logo.png" alt="Vivero">
+                <h3>Vivero</h3>
+                <a href="Vivero.html" class="boton-paginas">Información</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container container">
+            <div class="footer-section">
+                <h3>Sobre Nosotros</h3>
+                <p>Somos una empresa dedicada en <strong class="resaltado">"Sembrar Futuro"</strong></p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contactos</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/agricolasimar.sas.7/" target="_blank"><i class="bi bi-facebook"></i> Facebook</a></li>
+                    <li><a href="https://www.instagram.com/agricola_simar" target="_blank"><i class="bi bi-instagram"></i> Instagram</a></li>
+                    <li><a href="https://w.app/eh1xCP" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a></li>
+                    <li><a href="mailto:agricolasimarsas@gmail.com"><i class="bi bi-envelope-at"></i> Gmail</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copywrap">
+            <p class="copy">&copy; 2025 Agrícola Simar S.A.S. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT NAV -->
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const mainNav = document.getElementById('mainNav');
+        navToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('open');
+        });
+    </script>
+
+</body>
+</html>
+
